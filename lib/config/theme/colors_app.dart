@@ -10,3 +10,11 @@ const warningColor = Color(0xffFACC15);
 const errorColor = Color(0xffF75555);
 const disableColor = Color(0xffD8D8D8);
 const disButtonColor = Color(0xff476EBE);
+
+const activePrimaryColor = Color(0xffEEF4FF);
+
+//Dark Colors
+
+const dark1 = Color(0xff181A20);
+const dark2 = Color(0xff1F222A);
+const dark3 = Color(0xff35383F);

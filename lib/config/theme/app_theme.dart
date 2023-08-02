@@ -5,35 +5,49 @@ import 'colors_app.dart';
 
 class AppTheme {
   ThemeData getTheme() => ThemeData(
-        colorScheme: const ColorScheme.light(
-          primary: primaryColor,
-          secondary: secondaryColor,
+      useMaterial3: true,
+      // splashColor: Colors.transparent,
+      //highlightColor: Colors.transparent,
+      // hoverColor: Colors.transparent,
+      colorScheme: const ColorScheme.light(
+        primary: primaryColor,
+        secondary: secondaryColor,
+      ),
+      textTheme: GoogleFonts.urbanistTextTheme().copyWith(
+        displayLarge: TextStyle(
+            fontSize: 10, fontWeight: FontWeight.bold, color: Colors.grey[100]),
+        displayMedium:
+            const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        displaySmall:
+            const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+      ),
+      inputDecorationTheme: const InputDecorationTheme(
+        enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.transparent)),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-        textTheme: GoogleFonts.urbanistTextTheme().copyWith(
-          displayLarge:
-              const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
-          displayMedium:
-              const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-          displaySmall:
-              const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-        ),
-      );
+      ));
 }
 
-TextStyle headLine4 = AppTheme()
-    .getTheme()
-    .textTheme
-    .displayLarge!
-    .copyWith(fontSize: 24, fontWeight: FontWeight.bold);
+final textStyleApp = AppTheme().getTheme().textTheme;
 
-TextStyle headLine5 = AppTheme()
-    .getTheme()
-    .textTheme
-    .displayLarge!
-    .copyWith(fontSize: 20, fontWeight: FontWeight.bold);
+final bodyMedium14 = AppTheme().getTheme().textTheme.bodyMedium!.copyWith(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: Colors.grey[500],
+    letterSpacing: 1.3);
 
-TextStyle headLine6 = AppTheme()
+//bold
+final bodyLarge16 = AppTheme()
     .getTheme()
     .textTheme
-    .displayLarge!
-    .copyWith(fontSize: 18, fontWeight: FontWeight.bold);
+    .bodyMedium!
+    .copyWith(fontSize: 16, fontWeight: FontWeight.bold, letterSpacing: 1.3);
+
+//Semibold
+final bodyLarge14 = AppTheme()
+    .getTheme()
+    .textTheme
+    .bodyMedium!
+    .copyWith(fontSize: 14, fontWeight: FontWeight.w600, letterSpacing: 1.3);

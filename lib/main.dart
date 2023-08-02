@@ -1,3 +1,4 @@
+import 'package:allpay/config/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'config/router/app_router.dart';
@@ -14,6 +15,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: appRouter,
+      theme: AppTheme().getTheme(),
     );
   }
 }
